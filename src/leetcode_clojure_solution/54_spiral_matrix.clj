@@ -1,5 +1,8 @@
 (ns leetcode-clojure-solution.54-spiral-matrix)
 
+(defn rotate [input]
+  (reverse (apply map vector input)))
+
 (defn spiral-print [input]
   (loop [[first-row & more-rows] input
          accum []]
